@@ -1,0 +1,109 @@
+/* Light Mode Styles */
+.rdp-day {
+  color: black !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.rdp-today {
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.rdp-range_start .rdp-day_button {
+  color: white !important;
+  border-radius: 20px 0px 0px 20px !important;
+  background-color: rgb(181, 184, 190);
+}
+
+.rdp-range_end .rdp-day_button {
+  color: white !important;
+  margin: 0 !important;
+  border-radius: 0px 20px 20px 0px !important;
+  background-color: rgb(181, 184, 190);
+}
+
+.rdp-range_middle {
+  background-color: #acaac0;
+  color: white !important;
+}
+
+.rdp-month_caption {
+  background-color: rgb(181, 184, 190) !important;
+  color: white;
+  padding: 5px;
+}
+
+.rdp-nav .rdp-button_previous .rdp-chevron {
+  fill: white !important;
+  color: white !important;
+}
+.rdp-nav .rdp-button_next .rdp-chevron {
+  fill: white !important;
+  color: white !important;
+}
+
+.rdp-day_button:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Remove border for range start and end */
+.rdp-range_start .rdp-day_button,
+.rdp-range_end .rdp-day_button {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Optional: Add a custom focus style if needed */
+.rdp-day_button:focus {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2); /* Example custom focus shadow */
+}
+
+/* Dark Mode Styles */
+.dark-mode .rdp-day {
+  color: white !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dark-mode .rdp-today {
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.dark-mode .rdp-range_start .rdp-day_button {
+  color: white !important;
+  border-radius: 20px 0px 0px 20px !important;
+}
+
+.dark-mode .rdp-range_end .rdp-day_button {
+  color: white !important;
+  margin: 0 !important;
+  border-radius: 0px 20px 20px 0px !important;
+}
+
+.dark-mode .rdp-range_middle {
+  background-color: #3730a3;
+}
+
+.dark-mode .rdp-month_caption {
+  background-color: rgb(55, 65, 81) !important;
+  box-shadow: 0 2px 15px -2px black !important;
+  padding: 5px;
+}
+
+.dark-mode .rdp-nav .rdp-button_previous .rdp-chevron {
+  fill: white !important;
+  color: white !important; /* For non-SVG elements */
+}
+.dark-mode .rdp-nav .rdp-button_next .rdp-chevron {
+  fill: white !important;
+  color: white !important; /* For non-SVG elements */
+}
+
+.rdp-root .rdp-months .rdp-month_grid .rdp-month_caption {
+  width: 100% !important;
+}

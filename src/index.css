@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply px-2 h-[35px]  lg:w-[400px]  focus:outline-none focus:ring focus:ring-indigo-600 rounded-sm border border-gray-300 focus:border-blue-500  transition-all duration-300;
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
