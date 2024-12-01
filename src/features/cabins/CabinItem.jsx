@@ -118,7 +118,7 @@ export default function CabinItem({ cabin }) {
                   </button>
                 </Menus.List>
 
-                <Modal.Window name="edit" className="bg-gray-700">
+                <Modal.Window name="edit">
                   <CreateCabinForm cabinToEdit={cabin} />
                 </Modal.Window>
 

@@ -43,12 +43,12 @@ export default function CreateCabinForm({ onCloseModal, cabinToEdit = {} }) {
       );
   }
   return (
-    <div className="mt-10 px-2 max-w-[900px]" ref={ref}>
+    <div className="w-[325px] md:w-auto" ref={ref}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-2 lg:flex lg:flex-col lg:h-[70vh] lg:py-10"
+        className="flex flex-col gap-2 lg:flex lg:flex-col lg:h-[50vh] lg:py-10"
       >
-        <div className="lg:flex lg:gap-10 gap-16 flex items-center ">
+        <div className="lg:flex lg:gap-10 flex items-center ">
           <label className="basis-40">Cabin name</label>
           <input
             type="text"
@@ -62,7 +62,7 @@ export default function CreateCabinForm({ onCloseModal, cabinToEdit = {} }) {
           />
         </div>
 
-        <div className="lg:flex lg:gap-10 gap-16 flex items-center">
+        <div className="lg:flex lg:gap-10  flex items-center">
           <label className="basis-40">Maximum capacity</label>
           <input
             type="number"
@@ -76,7 +76,7 @@ export default function CreateCabinForm({ onCloseModal, cabinToEdit = {} }) {
           />
         </div>
 
-        <div className="lg:flex lg:gap-10 gap-16 flex items-center">
+        <div className="lg:flex lg:gap-10  flex items-center">
           <label className="basis-40">Regular price</label>
           <input
             type="number"
@@ -90,7 +90,7 @@ export default function CreateCabinForm({ onCloseModal, cabinToEdit = {} }) {
           />
         </div>
 
-        <div className="lg:flex lg:gap-10 gap-16 flex items-center">
+        <div className="lg:flex lg:gap-10  flex items-center">
           <label className="basis-40">Discount</label>
           <input
             type="number"
@@ -114,8 +114,8 @@ export default function CreateCabinForm({ onCloseModal, cabinToEdit = {} }) {
           <textarea
             className={`${
               isDarkMode
-                ? "bg-gray-700 w-[245px] input h-[65px] border-gray-600 lg:w-[400px]"
-                : "bg-gray-200 w-[245px] input h-[65px] lg:w-[400px]"
+                ? "bg-gray-700 w-[245px] input h-[65px] border-gray-600  lg:w-[400px]"
+                : "bg-gray-200 w-full input h-[65px] lg:w-[400px]"
             }`}
             id="description "
             {...register("description", { require: "This field is required" })}

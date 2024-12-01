@@ -39,7 +39,7 @@ function Window({ name, children }) {
       <div
         className={`transition-colors duration-500${
           isDarkMode
-            ? " fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  border border-gray-700 text-gray-300 rounded-lg shadow-lg px-4  py-6 transition-all duration-500  bg-gray-700 "
+            ? " fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  border border-gray-400 text-gray-300 rounded-lg shadow-lg px-4 py-4 transition-all duration-500  bg-gray-700 "
             : " fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  border rounded-lg shadow-lg px-4  py-6 transition-all duration-500 text-gray-700 bg-gray-200 "
         }`}
       >
