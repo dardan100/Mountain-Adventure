@@ -63,7 +63,7 @@ export default function SalesChart({ bookings, numDays }) {
     setOpacity((op) => ({ ...op, [dataKey]: 1 }));
   };
   return (
-    <div className="grid col-start-1 -col-end-1 mt-2 px-2  py-4">
+    <div className="grid col-start-1 -col-end-1 mt-2 px-2 py-4">
       <h1
         className={`transition-colors duration-500 ${
           isDarkMode

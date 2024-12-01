@@ -29,7 +29,7 @@ export default function Stat({ icon, title, value, color, bgColor }) {
     <div
       className={`transition-colors duration-500 ${
         isDarkMode
-          ? "bg-gray-800 md:grid md:grid-cols-[4rem_2rem] xl:grid-cols-[4rem_2rem] items-center py-8 md:pr-16 rounded-md mt-9 md:place-items-start gap-2 px-2 place-items-center md:h-28  md:w-full grid grid-rows-[auto_auto] w-[250px]"
+          ? "bg-gray-800 md:grid md:grid-cols-[4rem_2rem] xl:grid-cols-[4rem_2rem]  py-8 md:pr-16 rounded-md mt-9 md:place-items-start gap-2 px-2 place-items-center md:h-28  md:w-full grid grid-rows-[auto_auto] w-[250px]"
           : "bg-white md:grid md:grid-cols-[4rem_2rem] xl:grid-cols-[4rem_2rem] items-center py-8 md:pr-16 rounded-md mt-9 md:place-items-start gap-2 px-2 place-items-center md:h-28  md:w-full grid grid-rows-[auto_auto] w-[250px]"
       }`}
     >

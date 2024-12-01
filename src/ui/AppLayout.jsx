@@ -7,7 +7,7 @@ import { useDarkMode } from "../context/DarkModeContext";
 export default function AppLayout() {
   const { isDarkMode } = useDarkMode();
   return (
-    <div className="grid relative xl:grid-cols-[15rem_1fr] grid-rows-[auto_1fr]  ">
+    <div className="grid relative xl:grid-cols-[15rem_1fr] overflow-hidden grid-rows-[auto_1fr]  ">
       {/* Header spans the full width at the top */}
       <header
         className={`${
@@ -38,7 +38,7 @@ export default function AppLayout() {
             : "col-start-1 col-end-3 xl:col-start-2 row-start-2 -mt-4 bg-gray-100 xl:p-[4rem_4.8rem_6.4rem] p-[2rem_1.8rem_1.4rem] overflow-auto"
         }`}
       >
-        <div className="flex flex-col gap-[3.2rem] max-w-[120rem] m-[0_auto]">
+        <div className="flex flex-col gap-[3.2rem]  max-w-[120rem] m-[0_auto]">
           <Outlet />
         </div>
       </main>

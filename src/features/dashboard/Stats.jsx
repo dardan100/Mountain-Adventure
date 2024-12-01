@@ -73,7 +73,7 @@ export default function Stats({
     (numDays * cabinCount);
 
   return (
-    <div className="flex md:gap-4 items-center flex-col md:flex-row w-full">
+    <div className="flex md:gap-4 items-center justify-center flex-col md:flex-row w-full">
       {/* Fixed width for uniformity */}
       <Stat
         icon={<HiOutlineBriefcase />}

@@ -18,7 +18,7 @@ export default function DashboardLayout() {
 
   return (
     <>
-      <div className="grid gap-10">
+      <div className="grid gap-10 ">
         <Stats
           bookings={bookings}
           confirmedStays={confirmedStays}
