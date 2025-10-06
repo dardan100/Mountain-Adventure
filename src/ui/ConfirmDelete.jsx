@@ -1,12 +1,14 @@
 import React from "react";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import { useDarkMode } from "../context/DarkModeContext";
 
 export default function ConfirmDelete({ onConfirm, onCloseModal }) {
   const ref = useOutsideClick(onCloseModal);
+  const { isDarkMode } = useDarkMode();
   return (
     <div className="px-4 py-4" ref={ref}>
       <h1 className="text-2xl mb-4 ">Delete booking</h1>
-      <p className="text-gray-700">
+      <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>
         Are you sure you want to delete this booking permanently? This action
         cannot be undone.
       </p>
