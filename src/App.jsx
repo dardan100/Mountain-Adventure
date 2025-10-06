@@ -17,6 +17,7 @@ import { DarkModeProvider } from "./context/DarkModeContext";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import Account from "./pages/Account";
 import CreateBookingForm from "./features/bookings/CreateBookingForm";
+import MenuContextProvider from "./context/MobileMenuContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,30 +32,32 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <DarkModeProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route
-              element={
-                <ProtectedRoute>
-                  <AppLayout />
-                </ProtectedRoute>
-              }
-            >
-              <Route index element={<Navigate replace to="dashboard" />} />
-              <Route path="dashboard" element={<Dashboard />} />
-              <Route path="bookings" element={<Bookings />} />
-              <Route path="bookings/:bookingId" element={<Booking />} />
-              <Route path="bookings/new" element={<CreateBookingForm />} />
-              <Route path="checkin/:bookingId" element={<Checkin />} />
-              <Route path="cabins" element={<Cabins />} />
-              <Route path="user" element={<User />} />
-              <Route path="account" element={<Account />} />
-              <Route path="settings" element={<Settings />} />
-            </Route>
+        <MenuContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route index element={<Navigate replace to="dashboard" />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="bookings" element={<Bookings />} />
+                <Route path="bookings/:bookingId" element={<Booking />} />
+                <Route path="bookings/new" element={<CreateBookingForm />} />
+                <Route path="checkin/:bookingId" element={<Checkin />} />
+                <Route path="cabins" element={<Cabins />} />
+                <Route path="user" element={<User />} />
+                <Route path="account" element={<Account />} />
+                <Route path="settings" element={<Settings />} />
+              </Route>
 
-            <Route path="login" element={<Login />} />
-          </Routes>
-        </BrowserRouter>
+              <Route path="login" element={<Login />} />
+            </Routes>
+          </BrowserRouter>
+        </MenuContextProvider>
       </DarkModeProvider>
       <Toaster position="top-center" reverseOrder={false} />
     </QueryClientProvider>

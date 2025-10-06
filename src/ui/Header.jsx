@@ -2,6 +2,7 @@ import React from "react";
 import HeaderMenu from "./HeaderMenu";
 import { useDarkMode } from "../context/DarkModeContext";
 import UserAvatar from "../features/authentication/UserAvatar";
+import Hamburger from "./Hamburger";
 
 export default function Header() {
   const { isDarkMode } = useDarkMode();
@@ -15,6 +16,10 @@ export default function Header() {
     >
       <UserAvatar />
       <HeaderMenu />
+
+      <span className="-mr-13 p-5">
+        <Hamburger />
+      </span>
     </div>
   );
 }

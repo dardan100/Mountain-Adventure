@@ -1,7 +1,7 @@
 import React from "react";
 import { useDarkMode } from "../context/DarkModeContext";
 import logoDark from "../../src/cabins/snowfall-logo.png";
-import logoLight from "../../src/cabins/s.png";
+import logoLight from "../../src/cabins/logoLight.png";
 
 export default function Logo() {
   const { isDarkMode } = useDarkMode();

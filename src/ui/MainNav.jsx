@@ -6,15 +6,15 @@ import {
   HiOutlineHomeModern,
 } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import Logo from "./Logo";
 import { useDarkMode } from "../context/DarkModeContext";
+import MobileMenu from "./MobileMenu";
+// ⬅️ Import new mobile menu
 
 export default function MainNav() {
   const [activeLink, setActiveLink] = useState(
     () => localStorage.getItem("activeLink") || "/dashboard"
   );
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
@@ -23,45 +23,19 @@ export default function MainNav() {
 
   function handleClick(link) {
     setActiveLink(link);
-    setIsMenuOpen(false); // Close menu on link click
   }
-
-  function toggleMenu() {
-    setIsMenuOpen((prev) => !prev);
-  }
-
-  // xl:hidden flex items-center px-4 py-2 transition-transform transform duration-300 ease-in-out hover:scale-110 hover:rotate-12 hover:text-indigo-500
 
   return (
     <div className="relative">
-      {/* Hamburger Icon */}
-      <button
-        onClick={toggleMenu}
-        className="xl:hidden flex items-center fixed left-4 top-[5px] px-4 py-4 transition-transform transform duration-300 ease-in-out hover:scale-x-125 hover:rotate-180 hover:text-indigo-900"
-        aria-label="Toggle menu"
-      >
-        {isMenuOpen ? (
-          <HiOutlineX className="text-3xl  text-indigo-700 transition-all duration-300 ease-in-out " />
-        ) : (
-          <HiOutlineMenu className="text-3xl text-indigo-700  transition-all duration-300 ease-in-out" />
-        )}
-      </button>
-
-      {/* Navigation Links */}
+      {/* Desktop Navigation */}
       <div
         className={`${
-          isMenuOpen
-            ? "opacity-100 translate-x-0 "
-            : "opacity-0 pointer-events-none xl:pointer-events-auto -translate-x-4 xl:opacity-100 xl:-translate-x-0 "
-        } ${
           isDarkMode
-            ? "xl:flex flex-col gap-y-10 px-10 mt-12 font-medium text-gray-300 h-screen xl:h-auto xl:mt-0 xl:px-0 absolute -top-[260px] xl:top-16 -left-10 xl:left-0 xl:bg-transparent  xl:w-auto shadow-lg xl:shadow-none z-10 xl:relative rounded-lg bg-indigo-700 transition-all duration-500 ease-in-out transform"
-            : "xl:flex flex-col gap-y-10 px-10 mt-12 font-medium text-gray-500 h-screen xl:h-auto xl:mt-0 xl:px-0 absolute -top-[225px] xl:top-16 -left-10 xl:left-0 xl:bg-transparent  xl:w-auto shadow-lg xl:shadow-none z-10 xl:relative rounded-lg bg-indigo-100 transition-all duration-500 ease-in-out transform"
-        } `}
+            ? "hidden xl:flex flex-col gap-y-10 font-medium text-gray-300 xl:relative"
+            : "hidden xl:flex flex-col gap-y-10 font-medium text-gray-500 xl:relative"
+        }`}
       >
-        <div className="xl:hidden mb-8 mt-10">
-          <Logo />
-        </div>
+        <Logo />
 
         <Link
           to="/dashboard"
@@ -88,7 +62,7 @@ export default function MainNav() {
           <span
             className={`${
               isDarkMode
-                ? "group-hover:text-black text-white  text-xl transition-colors"
+                ? "group-hover:text-black text-white text-xl transition-colors"
                 : "group-hover:text-black text-gray-700 text-xl transition-colors"
             }`}
           >
@@ -105,7 +79,7 @@ export default function MainNav() {
                 ? "bg-indigo-500"
                 : ""
               : activeLink === "/cabins"
-              ? "bg-indigo-300"
+              ? "bg-indigo-200"
               : ""
           } group flex items-center gap-2 hover:bg-indigo-300 rounded-md text-lg px-4 py-2`}
         >
@@ -121,7 +95,7 @@ export default function MainNav() {
           <span
             className={`${
               isDarkMode
-                ? "group-hover:text-black text-white  text-xl transition-colors"
+                ? "group-hover:text-black text-white text-xl transition-colors"
                 : "group-hover:text-black text-gray-700 text-xl transition-colors"
             }`}
           >
@@ -138,7 +112,7 @@ export default function MainNav() {
                 ? "bg-indigo-500"
                 : ""
               : activeLink === "/bookings"
-              ? "bg-indigo-300"
+              ? "bg-indigo-200"
               : ""
           } group flex items-center gap-2 hover:bg-indigo-300 rounded-md text-lg px-4 py-2`}
         >
@@ -154,7 +128,7 @@ export default function MainNav() {
           <span
             className={`${
               isDarkMode
-                ? "group-hover:text-black text-white  text-xl transition-colors"
+                ? "group-hover:text-black text-white text-xl transition-colors"
                 : "group-hover:text-black text-gray-700 text-xl transition-colors"
             }`}
           >
@@ -171,7 +145,7 @@ export default function MainNav() {
                 ? "bg-indigo-500"
                 : ""
               : activeLink === "/user"
-              ? "bg-indigo-300"
+              ? "bg-indigo-200"
               : ""
           } group flex items-center gap-2 hover:bg-indigo-300 rounded-md text-lg px-4 py-2`}
         >
@@ -187,7 +161,7 @@ export default function MainNav() {
           <span
             className={`${
               isDarkMode
-                ? "group-hover:text-black text-white  text-xl transition-colors"
+                ? "group-hover:text-black text-white text-xl transition-colors"
                 : "group-hover:text-black text-gray-700 text-xl transition-colors"
             }`}
           >
@@ -204,7 +178,7 @@ export default function MainNav() {
                 ? "bg-indigo-500"
                 : ""
               : activeLink === "/settings"
-              ? "bg-indigo-300"
+              ? "bg-indigo-200"
               : ""
           } group flex items-center gap-2 hover:bg-indigo-300 rounded-md text-lg px-4 py-2`}
         >
@@ -220,7 +194,7 @@ export default function MainNav() {
           <span
             className={`${
               isDarkMode
-                ? "group-hover:text-black text-white  text-xl transition-colors"
+                ? "group-hover:text-black text-white text-xl transition-colors"
                 : "group-hover:text-black text-gray-700 text-xl transition-colors"
             }`}
           >
@@ -228,6 +202,9 @@ export default function MainNav() {
           </span>
         </Link>
       </div>
+
+      {/* Mobile Menu Component */}
+      <MobileMenu />
     </div>
   );
 }
