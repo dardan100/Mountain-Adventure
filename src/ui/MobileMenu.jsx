@@ -34,7 +34,7 @@ export default function MobileMenu() {
           visible: { opacity: 1, x: "0%" },
         }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className={`flex h-full w-full max-w-96 min-w-60 flex-col items-start gap-y-8 p-6 pl-7 shadow-xl ${
+        className={`flex h-full w-[55%] max-w-96 min-w-60 flex-col items-start gap-y-8 p-6 pl-7 shadow-xl ${
           isDarkMode ? "bg-indigo-800" : "bg-indigo-100"
         }`}
       >

@@ -11,7 +11,7 @@ export default function Dashboard() {
         className={`transition-colors duration-500 ${
           isDarkMode
             ? "md:flex md:items-center md:flex-row md:justify-between flex flex-col items-center bg-indigo-700 rounded-xl min-w-[372px] py-4 md:px-4"
-            : "md:flex md:items-center md:flex-row md:justify-between flex flex-col items-center bg-blue-300 rounded-xl py-4 md:px-4"
+            : "md:flex md:items-center md:flex-row md:justify-between flex flex-col items-center bg-blue-300 rounded-xl py-4 md:px-4 max-xl:px-10"
         }  `}
       >
         <h1
